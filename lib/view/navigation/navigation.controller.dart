@@ -1,3 +1,4 @@
+import 'package:appdev/view/event/event.dart';
 import 'package:appdev/view/notification/notification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,7 +9,7 @@ class NavigationController extends GetxController {
 
   final screen = [
     const HomePage(),
-    Container(color: Colors.red),
+    MyHomePage(),
     const NotificationPage(),
     Container(color: Colors.orange),
     Container(color: Colors.green)

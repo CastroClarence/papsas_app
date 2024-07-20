@@ -1,4 +1,3 @@
-import 'package:appdev/view/widget/text.login.dart';
 import 'package:appdev/view/widget/button.login.dart';
 import 'package:appdev/view/forms/register.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +6,21 @@ class LoginView extends StatelessWidget {
   LoginView({super.key});
   final TextEditingController emailController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
+  final _formKey = GlobalKey<FormState>();
+
+  String? emailValidator(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter a valid email address';
+    }
+    return null;
+  }
+
+  String? passwordValidator(String? value) {
+    if (value == null || value.isEmpty) {
+      return 'Please enter a valid password';
+    }
+    return null;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -51,26 +65,66 @@ class LoginView extends StatelessWidget {
                         ),
                         const SizedBox(height: 15),
                         //email
-                        TextFormLogin(
-                          prefixIcon: Icons.account_circle_rounded,
-                          controller: emailController,
-                          text: 'Email',
-                          obscure: false,
-                          textInputType: TextInputType.emailAddress,
-                        ), // importing the text form global
-
-                        const SizedBox(height: 10),
-
-                        TextFormLogin(
-                          prefixIcon: Icons.lock,
-                          controller: passwordController,
-                          text: 'Password',
-                          obscure: true,
-                          textInputType: TextInputType.text,
-                        ), // importing the text form global
-                        const SizedBox(height: 15),
-
-                        ButtonGlobal(),
+                        Form(
+                          key: _formKey,
+                          child: Column(
+                            children: <Widget>[
+                              Container(
+                                height: 60,
+                                padding:
+                                    const EdgeInsets.only(top: 5, left: 10),
+                                decoration: BoxDecoration(
+                                    color: const Color.fromARGB(
+                                        255, 255, 255, 255),
+                                    borderRadius: BorderRadius.circular(6),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.black.withOpacity(0.2),
+                                          blurRadius: 15)
+                                    ]),
+                                child: TextFormField(
+                                  controller: emailController,
+                                  decoration: const InputDecoration(
+                                    labelText: 'Email',
+                                    border: InputBorder.none,
+                                    icon: Icon(Icons.account_circle_rounded),
+                                  ),
+                                  keyboardType: TextInputType.emailAddress,
+                                  validator: emailValidator,
+                                ),
+                              ),
+                              const SizedBox(height: 10),
+                              Container(
+                                height: 60,
+                                padding:
+                                    const EdgeInsets.only(top: 5, left: 10),
+                                decoration: BoxDecoration(
+                                    color: const Color.fromARGB(
+                                        255, 255, 255, 255),
+                                    borderRadius: BorderRadius.circular(6),
+                                    boxShadow: [
+                                      BoxShadow(
+                                          color: Colors.black.withOpacity(0.2),
+                                          blurRadius: 15)
+                                    ]),
+                                child: TextFormField(
+                                  controller: passwordController,
+                                  decoration: const InputDecoration(
+                                    border: InputBorder.none,
+                                    labelText: 'Password',
+                                    icon: Icon(Icons.lock),
+                                  ),
+                                  keyboardType: TextInputType.text,
+                                  validator: passwordValidator,
+                                ),
+                              ),
+                              const SizedBox(height: 15),
+                              ButtonGlobal(
+                                formKey: _formKey,
+                              ),
+                            ],
+                          ),
+                        ),
                       ],
                     ),
                   ],

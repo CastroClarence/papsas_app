@@ -1,5 +1,6 @@
 import 'package:appdev/view/notification/notification_card.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class NotificationPage extends StatelessWidget {
   const NotificationPage({super.key});
@@ -32,6 +33,17 @@ class NotificationPage extends StatelessWidget {
                     icon: Icons.event_available_outlined,
                     title: "Annual Gala Dinner",
                     date: "July 15, 2023",
+                    description:
+                        "Join us for our annual gala dinner, where we celebrate our achievements and honor our supporters.")
+              ]),
+          NotificationCard(
+              heading: "Recent Achievements",
+              icon: Icons.emoji_events_outlined,
+              items: [
+                CardContent(
+                    icon: FontAwesomeIcons.award,
+                    title: "Organization Impact Award",
+                    date: "July 4, 2022",
                     description:
                         "Join us for our annual gala dinner, where we celebrate our achievements and honor our supporters.")
               ]),
