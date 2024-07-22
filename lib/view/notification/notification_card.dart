@@ -1,15 +1,19 @@
+import 'package:appdev/view/forms/heading.dart';
+import 'package:appdev/view/notification/upcoming_events_page.dart';
 import 'package:flutter/material.dart';
 
 class NotificationCard extends StatelessWidget {
   final String heading;
   final IconData icon;
   final List<CardContent> items;
+  final Widget Function(BuildContext context) destination;
 
   const NotificationCard(
       {super.key,
       required this.heading,
       required this.icon,
-      required this.items});
+      required this.items,
+      required this.destination});
 
   @override
   Widget build(BuildContext context) {
@@ -30,12 +34,21 @@ class NotificationCard extends StatelessWidget {
                 const SizedBox(
                   width: 10,
                 ),
-                Text(
-                  heading,
-                  style: const TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
+                Expanded(
+                  child: Text(
+                    heading,
+                    style: const TextStyle(
+                      fontSize: 23,
+                      // fontWeight: FontWeight.bold,
+                    ),
                   ),
+                ),
+                TextButton(
+                  onPressed: () {
+                    Navigator.push(
+                        context, MaterialPageRoute(builder: destination));
+                  },
+                  child: const Text("View All"),
                 ),
                 const SizedBox(
                   height: 10,
