@@ -1,5 +1,6 @@
 import 'package:appdev/view/event/event.dart';
 import 'package:appdev/view/notification/notification.dart';
+import 'package:appdev/view/profile/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:appdev/view/home/home.dart';
@@ -11,7 +12,7 @@ class NavigationController extends GetxController {
     const HomePage(),
     MyHomePage(),
     const NotificationPage(),
-    Container(color: Colors.orange),
+    const ProfilePage(),
     Container(color: Colors.green)
   ];
 }
