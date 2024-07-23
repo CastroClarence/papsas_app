@@ -12,7 +12,7 @@ class AchievementPage extends StatelessWidget {
         title: const Text("Recent Achievements"),
       ),
       body: const Padding(
-        padding: EdgeInsets.all(8),
+        padding: EdgeInsets.all(16),
         child: Column(
           children: [
             CardContent(

@@ -11,7 +11,7 @@ class UpcomingEventsPage extends StatelessWidget {
         title: const Text("Upcoming Events"),
       ),
       body: const Padding(
-        padding: EdgeInsets.all(8),
+        padding: EdgeInsets.all(16),
         child: Column(
           children: [
             CardContent(

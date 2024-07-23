@@ -26,7 +26,7 @@ class NotificationPage extends StatelessWidget {
         ],
       ),
       body: ListView(
-        padding: const EdgeInsets.all(8),
+        padding: const EdgeInsets.all(16),
         children: [
           NotificationCard(
             heading: "Upcoming Events",
