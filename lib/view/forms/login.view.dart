@@ -10,14 +10,14 @@ class LoginView extends StatelessWidget {
 
   String? emailValidator(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Please enter a valid email address';
+      return '';
     }
     return null;
   }
 
   String? passwordValidator(String? value) {
     if (value == null || value.isEmpty) {
-      return 'Please enter a valid password';
+      return '';
     }
     return null;
   }
@@ -70,9 +70,9 @@ class LoginView extends StatelessWidget {
                           child: Column(
                             children: <Widget>[
                               Container(
-                                height: 60,
-                                padding:
-                                    const EdgeInsets.only(top: 5, left: 10),
+                                height: 70,
+                                padding: const EdgeInsets.only(
+                                    top: 5, left: 10, bottom: 5),
                                 decoration: BoxDecoration(
                                     color: const Color.fromARGB(
                                         255, 255, 255, 255),
@@ -82,20 +82,22 @@ class LoginView extends StatelessWidget {
                                           color: Colors.black.withOpacity(0.2),
                                           blurRadius: 15)
                                     ]),
-                                child: TextFormField(
-                                  controller: emailController,
-                                  decoration: const InputDecoration(
-                                    labelText: 'Email',
-                                    border: InputBorder.none,
-                                    icon: Icon(Icons.account_circle_rounded),
+                                child: Center(
+                                  child: TextFormField(
+                                    controller: emailController,
+                                    decoration: const InputDecoration(
+                                      labelText: 'Email',
+                                      border: InputBorder.none,
+                                      icon: Icon(Icons.account_circle_rounded),
+                                    ),
+                                    keyboardType: TextInputType.emailAddress,
+                                    validator: emailValidator,
                                   ),
-                                  keyboardType: TextInputType.emailAddress,
-                                  validator: emailValidator,
                                 ),
                               ),
-                              const SizedBox(height: 10),
+                              const SizedBox(height: 20),
                               Container(
-                                height: 60,
+                                height: 70,
                                 padding:
                                     const EdgeInsets.only(top: 5, left: 10),
                                 decoration: BoxDecoration(
@@ -107,18 +109,20 @@ class LoginView extends StatelessWidget {
                                           color: Colors.black.withOpacity(0.2),
                                           blurRadius: 15)
                                     ]),
-                                child: TextFormField(
-                                  controller: passwordController,
-                                  decoration: const InputDecoration(
-                                    border: InputBorder.none,
-                                    labelText: 'Password',
-                                    icon: Icon(Icons.lock),
+                                child: Center(
+                                  child: TextFormField(
+                                    controller: passwordController,
+                                    decoration: const InputDecoration(
+                                      border: InputBorder.none,
+                                      labelText: 'Password',
+                                      icon: Icon(Icons.lock),
+                                    ),
+                                    keyboardType: TextInputType.text,
+                                    validator: passwordValidator,
                                   ),
-                                  keyboardType: TextInputType.text,
-                                  validator: passwordValidator,
                                 ),
                               ),
-                              const SizedBox(height: 15),
+                              const SizedBox(height: 20),
                               ButtonGlobal(
                                 formKey: _formKey,
                               ),

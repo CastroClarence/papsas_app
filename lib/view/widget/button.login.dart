@@ -6,6 +6,26 @@ class ButtonGlobal extends StatelessWidget {
 
   const ButtonGlobal({super.key, required this.formKey});
 
+  void showValidationErrorDialog(BuildContext context, String errorMessage) {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Invalid Input'),
+          content: Text(errorMessage),
+          actions: <Widget>[
+            TextButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              child: const Text('OK'),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -21,7 +41,8 @@ class ButtonGlobal extends StatelessWidget {
                 MaterialPageRoute(
                     builder: (context) => const NavigationMenu()));
           } else {
-            debugPrint("Not working");
+            showValidationErrorDialog(
+                context, 'Please provide valid email and password!');
           }
         },
 
