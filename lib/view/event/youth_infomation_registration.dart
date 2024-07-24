@@ -19,7 +19,6 @@ class YouthInformation extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Container(
-                width: double.infinity,
                 height: 300,
                 padding: const EdgeInsets.all(20.0),
                 decoration: const BoxDecoration(
@@ -39,9 +38,9 @@ class YouthInformation extends StatelessWidget {
                 ),
               ),
               const Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.0),
+                padding: EdgeInsets.symmetric(horizontal: 12.0),
                 child: Text(
-                  'Join us for the annual Youth Forum 2024. Engage with peers, participate in workshops, and share your ideas to shape the future. This forum aims to empower the youth by providing a platform for discussion, innovation, and collaboration.',
+                  'We are excited to invite you to the Youth Forum 2024 Summit, hosted by the Philippines Association of Practitioners of Student Affairs and Services (PAPSAS) on July 24, 2024. This dynamic event is designed to empower young voices, foster meaningful dialogue, and inspire innovative solutions to the challenges facing today\'s youth. Engage with fellow students, educators, and leaders in interactive sessions, workshops, and networking activities that will shape the future of student affairs and services. Join us for an inspiring day dedicated to youth empowerment and leadership development. We look forward to your enthusiastic participation!',
                   style: TextStyle(
                     fontSize: 16,
                   ),
@@ -49,7 +48,10 @@ class YouthInformation extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              const ButtonRegister(),
+              const SizedBox(
+                  width: 390, // Adjust the width as needed
+                  child: ButtonRegister()),
+              SizedBox(height: 20),
             ],
           ),
         ),
