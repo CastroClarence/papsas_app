@@ -41,7 +41,7 @@ class LeaderInformation extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
-                  'Join us for the Regional Leadership Summit. Engage with peers, participate in workshops, and share your ideas to shape the future. This forum aims to empower the youth by providing a platform for discussion, innovation, and collaboration.',
+                  'We are delighted to invite you to the Regional Leader Summit of the Philippines Association of Practitioners of Student Affairs and Services (PAPSAS) on July 30, 2024. This significant gathering will bring together regional leaders and key stakeholders in student affairs to share best practices, explore emerging trends, and collaborate on initiatives aimed at elevating student support services. Join us for a day of inspiring sessions, strategic discussions, and valuable networking opportunities designed to enhance our collective impact on student well-being and success. We eagerly anticipate your participation in this transformative event.',
                   style: TextStyle(
                     fontSize: 16,
                   ),
@@ -49,7 +49,10 @@ class LeaderInformation extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              const ButtonRegister(),
+              const SizedBox(
+                  width: 390, // Adjust the width as needed
+                  child: ButtonRegister()),
+              SizedBox(height: 20),
             ],
           ),
         ),
