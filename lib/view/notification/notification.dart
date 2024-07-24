@@ -78,7 +78,8 @@ class NotificationPage extends StatelessWidget {
                     icon: Icons.attach_money,
                     title: "Membership Renewal",
                     date: "December 19, 2023",
-                    description: "Lorem Lorem Sinta, Buko ng Papaya"),
+                    description:
+                        "Your membership is about to expire. To continue enjoying our benefits without interruption, please renew your membership. "),
                 CardContent(
                     icon: Icons.attach_money,
                     title: "Event Registration",

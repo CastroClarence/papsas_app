@@ -14,7 +14,7 @@ class UpcomingEventsPage extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       body: const Padding(
-        padding: EdgeInsets.all(12),
+        padding: EdgeInsets.all(20),
         child: SingleChildScrollView(
           child: Column(
             children: [
