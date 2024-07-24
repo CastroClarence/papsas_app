@@ -1,6 +1,5 @@
 import 'package:appdev/view/notification/notification_card.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class UpcomingEventsPage extends StatelessWidget {
   const UpcomingEventsPage({super.key});

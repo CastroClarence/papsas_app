@@ -58,30 +58,6 @@ class ButtonGlobal extends StatelessWidget {
             fontSize: 16,
           ),
         ),
-
-        //code ni Kris
-        // child: Container(
-        //   alignment: Alignment.center,
-        //   height: 55,
-        //   decoration: BoxDecoration(
-        //     color: const Color.fromARGB(255, 255, 17, 0),
-        //     borderRadius: BorderRadius.circular(6),
-        //     boxShadow: [
-        //       BoxShadow(
-        //         color: Colors.black.withOpacity(0.2),
-        //         blurRadius: 10,
-        //       )
-        //     ],
-        //   ),
-        //   child: const Text(
-        //     'Login',
-        //     style: TextStyle(
-        //       color: Colors.white,
-        //       fontWeight: FontWeight.w600,
-        //       fontSize: 16,
-        //     ),
-        //   ),
-        // ),
       ),
     );
   }

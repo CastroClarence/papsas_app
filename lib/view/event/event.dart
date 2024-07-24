@@ -1,11 +1,12 @@
+import 'package:appdev/view/event/event_card.dart';
 import 'package:appdev/view/event/leader_information.dart';
 import 'package:appdev/view/event/research_information.dart';
 import 'package:appdev/view/event/youth_infomation_registration.dart';
 import 'package:flutter/material.dart';
 import 'package:table_calendar/table_calendar.dart';
-import 'package:appdev/view/event/research.dart';
-import 'package:appdev/view/event/youth.dart';
-import 'package:appdev/view/event/leader.dart';
+// import 'package:appdev/view/event/research.dart';
+// import 'package:appdev/view/event/youth.dart';
+// import 'package:appdev/view/event/leader.dart';
 
 class MyHomePage extends StatefulWidget {
   @override
@@ -54,7 +55,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         "images/papsas.png",
                         height: 28,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 8,
                       ),
                       const Text(
@@ -64,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
                             fontSize: 22,
                             fontWeight: FontWeight.w800),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       const Text(
                         "INC.",
                         style: TextStyle(
@@ -74,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   const Text(
@@ -84,15 +85,15 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontWeight: FontWeight.w700,
                         fontSize: 21),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 6,
                   ),
                   const Text(
                     "Let's explore what’s happening nearby",
                     style: TextStyle(color: Colors.black, fontSize: 15),
                   ),
-                  SizedBox(height: 20),
-                  Divider(),
+                  const SizedBox(height: 20),
+                  const Divider(),
                   TableCalendar<Event>(
                     firstDay: DateTime.utc(2010, 10, 16),
                     lastDay: DateTime.utc(2030, 3, 14),
@@ -137,7 +138,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       markerBuilder: (context, date, events) {
                         if (highlightedDates.contains(date)) {
                           return Container(
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.red,
                               shape: BoxShape.circle,
                             ),
@@ -201,9 +202,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       title: Text(event.title),
                     ),
                   ),
-                  SizedBox(height: 20),
-                  Divider(),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 20),
+                  const Divider(),
+                  const SizedBox(height: 10),
                   const Text(
                     "Upcoming Events",
                     style: TextStyle(
@@ -211,12 +212,33 @@ class _MyHomePageState extends State<MyHomePage> {
                         fontWeight: FontWeight.w700,
                         fontSize: 18),
                   ),
-                  SizedBox(height: 20),
-                  Research(),
-                  YouthForum(),
-                  LeaderSummit(),
-                  SizedBox(height: 20),
-                  Divider(),
+                  const SizedBox(height: 20),
+                  EventCard(
+                      title: "Research Conference",
+                      date: "July 26, 2024",
+                      venue: "Baguio City",
+                      image: "images/research.png",
+                      route: MaterialPageRoute(
+                          builder: (context) => ResearchInformation())),
+                  EventCard(
+                      title: "Interactive Youth Forum",
+                      date: "July 24, 2024",
+                      venue: "Club Yolanda, Batangas",
+                      image: "images/leader_summit.jpg",
+                      route: MaterialPageRoute(
+                          builder: (context) => YouthInformation())),
+                  EventCard(
+                      title: "Regional Leader Summit",
+                      date: "July 30, 2024",
+                      venue: "Manila",
+                      image: "images/youth_forum.jpg",
+                      route: MaterialPageRoute(
+                          builder: (context) => LeaderInformation())),
+                  // Research(),
+                  // YouthForum(),
+                  // LeaderSummit(),
+                  const SizedBox(height: 20),
+                  const Divider(),
                 ],
               ),
             ),

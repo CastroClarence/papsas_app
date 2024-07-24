@@ -11,7 +11,7 @@ class ProfilePage extends StatelessWidget {
       body: Column(
         children: [
           Container(
-            decoration: BoxDecoration(color: Colors.red),
+            decoration: const BoxDecoration(color: Colors.red),
             child: Padding(
               padding: const EdgeInsets.all(20),
               child: Column(
@@ -75,131 +75,71 @@ class ProfilePage extends StatelessWidget {
           Expanded(
             child: ListView(
               children: [
-                ListTile(
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 20),
-                  iconColor: const Color.fromARGB(255, 255, 17, 0),
-                  leading: const Icon(Icons.card_membership),
-                  title: const Text(
-                    "Benefits",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Color.fromARGB(255, 255, 17, 0),
-                    ),
-                  ),
-                  trailing: Container(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: IconButton(
-                      iconSize: 15,
-                      onPressed: () {},
-                      icon: const Icon(Icons.arrow_forward_ios),
-                      color: const Color.fromARGB(255, 241, 84, 73),
-                    ),
-                  ),
-                  onTap: () {
-                    // Add your onTap functionality here
-                  },
+                ProfileTile(
+                    icon: Icons.card_membership,
+                    title: "Benefits",
+                    ontap: () {}),
+                ProfileTile(
+                    icon: Icons.settings_outlined,
+                    title: "Settings",
+                    ontap: () {}),
+                ProfileTile(
+                    icon: Icons.description_outlined,
+                    title: "Terms and Conditions",
+                    ontap: () {}),
+                ProfileTile(
+                  icon: Icons.help_outline,
+                  title: "Help",
+                  ontap: () {},
                 ),
-                ListTile(
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 20),
-                  iconColor: const Color.fromARGB(255, 255, 17, 0),
-                  leading: const Icon(Icons.settings),
-                  title: const Text(
-                    "Settings",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Color.fromARGB(255, 255, 17, 0),
-                    ),
-                  ),
-                  trailing: Container(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: IconButton(
-                      iconSize: 15,
-                      onPressed: () {},
-                      icon: const Icon(Icons.arrow_forward_ios),
-                      color: const Color.fromARGB(255, 241, 84, 73),
-                    ),
-                  ),
-                  onTap: () {
-                    // Add your onTap functionality here
-                  },
-                ),
-                ListTile(
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 20),
-                  iconColor: const Color.fromARGB(255, 255, 17, 0),
-                  leading: const Icon(Icons.description),
-                  title: const Text(
-                    "Terms and Conditions",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Color.fromARGB(255, 255, 17, 0),
-                    ),
-                  ),
-                  trailing: Container(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: IconButton(
-                      iconSize: 15,
-                      onPressed: () {},
-                      icon: const Icon(Icons.arrow_forward_ios),
-                      color: const Color.fromARGB(255, 241, 84, 73),
-                    ),
-                  ),
-                  onTap: () {
-                    // Add your onTap functionality here
-                  },
-                ),
-                ListTile(
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 20),
-                  iconColor: const Color.fromARGB(255, 255, 17, 0),
-                  leading: const Icon(Icons.help_outline),
-                  title: const Text(
-                    "Help",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Color.fromARGB(255, 255, 17, 0),
-                    ),
-                  ),
-                  trailing: Container(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: IconButton(
-                      iconSize: 15,
-                      onPressed: () {},
-                      icon: const Icon(Icons.arrow_forward_ios),
-                      color: const Color.fromARGB(255, 241, 84, 73),
-                    ),
-                  ),
-                  onTap: () {
-                    // Add your onTap functionality here
-                  },
-                ),
-                ListTile(
-                  contentPadding: const EdgeInsets.symmetric(horizontal: 20),
-                  iconColor: const Color.fromARGB(255, 255, 17, 0),
-                  leading: const Icon(Icons.logout),
-                  title: const Text(
-                    "Logout",
-                    style: TextStyle(
-                      fontWeight: FontWeight.w700,
-                      color: Color.fromARGB(255, 255, 17, 0),
-                    ),
-                  ),
-                  trailing: Container(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: IconButton(
-                      iconSize: 15,
-                      onPressed: () {},
-                      icon: const Icon(Icons.arrow_forward_ios),
-                      color: const Color.fromARGB(255, 241, 84, 73),
-                    ),
-                  ),
-                  onTap: () {
-                    // Add your onTap functionality here
-                  },
+                ProfileTile(
+                  icon: Icons.logout_outlined,
+                  title: "Logout",
+                  ontap: () {},
                 ),
               ],
             ),
           ),
         ],
       ),
+    );
+  }
+}
+
+class ProfileTile extends StatelessWidget {
+  final IconData icon;
+  final String title;
+  final Function() ontap;
+
+  const ProfileTile(
+      {super.key,
+      required this.icon,
+      required this.title,
+      required this.ontap});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      contentPadding: const EdgeInsets.symmetric(horizontal: 20),
+      iconColor: const Color.fromARGB(255, 255, 17, 0),
+      leading: Icon(icon),
+      title: Text(
+        title,
+        style: const TextStyle(
+          fontWeight: FontWeight.w700,
+          color: Color.fromARGB(255, 255, 17, 0),
+        ),
+      ),
+      trailing: Container(
+        padding: const EdgeInsets.only(left: 20),
+        child: IconButton(
+          iconSize: 15,
+          onPressed: () {},
+          icon: const Icon(Icons.arrow_forward_ios),
+          color: const Color.fromARGB(255, 241, 84, 73),
+        ),
+      ),
+      onTap: ontap,
     );
   }
 }
