@@ -13,7 +13,7 @@ class ProfilePage extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(color: Colors.red),
             child: Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.all(10),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

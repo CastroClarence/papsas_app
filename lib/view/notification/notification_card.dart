@@ -19,7 +19,7 @@ class NotificationCard extends StatelessWidget {
       elevation: 0,
       color: Colors.white,
       child: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.all(10),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

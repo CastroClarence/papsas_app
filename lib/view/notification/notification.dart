@@ -27,7 +27,7 @@ class NotificationPage extends StatelessWidget {
             style: ElevatedButton.styleFrom(
               elevation: 0, // Remove shadow
               side: BorderSide.none, // Remove border
-              shape: CircleBorder(),
+              shape: const CircleBorder(),
               backgroundColor:
                   Colors.white, // Maintain circular shape for icon button
             ),
@@ -37,7 +37,6 @@ class NotificationPage extends StatelessWidget {
       ),
       backgroundColor: Colors.white,
       body: ListView(
-        padding: const EdgeInsets.all(8),
         children: [
           NotificationCard(
             heading: "Upcoming Events",
