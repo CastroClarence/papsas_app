@@ -41,7 +41,7 @@ class ResearchInformation extends StatelessWidget {
               const Padding(
                 padding: EdgeInsets.symmetric(horizontal: 16.0),
                 child: Text(
-                  'Join us for the Papsas Inc Research Conference. Engage with peers, participate in workshops, and share your ideas to shape the future. This forum aims to empower the youth by providing a platform for discussion, innovation, and collaboration.',
+                  'We are thrilled to invite you to the Research Conference of the Philippines Association of Practitioners of Student Affairs and Services (PAPSAS), taking place on July 26, 2024. This esteemed event will gather thought leaders, educators, and professionals dedicated to advancing student affairs and services through research and innovation. Join us for a day of insightful presentations, collaborative discussions, and networking opportunities, all aimed at enhancing our collective impact on student success. Don\'t miss this chance to be part of a transformative experience that will shape the future of student affairs in the Philippines. We look forward to your participation!',
                   style: TextStyle(
                     fontSize: 16,
                   ),
@@ -49,7 +49,10 @@ class ResearchInformation extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              const ButtonRegister(),
+              const SizedBox(
+                  width: 390, // Adjust the width as needed
+                  child: ButtonRegister()),
+              SizedBox(height: 20),
             ],
           ),
         ),
