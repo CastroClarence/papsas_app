@@ -4,7 +4,7 @@ import 'package:appdev/view/widget/text.form.global.dart';
 import 'package:appdev/view/widget/button.backhome.dart';
 
 class MembershipRegistration extends StatelessWidget {
-  MembershipRegistration({Key? key}) : super(key: key);
+  MembershipRegistration({super.key});
   final TextEditingController emailController = TextEditingController();
   final TextEditingController FirstNameController = TextEditingController();
   final TextEditingController PhoneController = TextEditingController();

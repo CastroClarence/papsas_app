@@ -23,10 +23,10 @@ class _HomeSliderState extends State<MemberSlider> {
     _pageController = PageController(viewportFraction: 0.8, initialPage: 1000);
 
     // Set up the timer for auto-play
-    _timer = Timer.periodic(Duration(seconds: 3), (Timer timer) {
+    _timer = Timer.periodic(const Duration(seconds: 3), (Timer timer) {
       if (_pageController.hasClients) {
         _pageController.nextPage(
-          duration: Duration(milliseconds: 300),
+          duration: const Duration(milliseconds: 300),
           curve: Curves.easeIn,
         );
       }

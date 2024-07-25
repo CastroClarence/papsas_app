@@ -69,7 +69,7 @@ class NavigationMenu extends StatelessWidget {
                 ? const Color.fromARGB(255, 255, 17, 0)
                 : Colors.grey,
           ),
-          SizedBox(height: 4.0), // Space between icon and label
+          const SizedBox(height: 4.0), // Space between icon and label
           Text(
             label,
             style: TextStyle(
@@ -108,18 +108,18 @@ class NavigationMenu extends StatelessWidget {
                 Positioned(
                   right: 0,
                   child: Container(
-                    padding: EdgeInsets.all(1),
+                    padding: const EdgeInsets.all(1),
                     decoration: BoxDecoration(
                       color: Colors.red,
                       borderRadius: BorderRadius.circular(6),
                     ),
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       minWidth: 12,
                       minHeight: 12,
                     ),
                     child: Text(
                       '$notificationCount',
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 8,
                       ),
@@ -129,7 +129,7 @@ class NavigationMenu extends StatelessWidget {
                 ),
             ],
           ),
-          SizedBox(height: 4.0), // Space between icon and label
+          const SizedBox(height: 4.0), // Space between icon and label
           Text(
             label,
             style: TextStyle(
@@ -168,18 +168,18 @@ class NavigationMenu extends StatelessWidget {
                 Positioned(
                   right: 0,
                   child: Container(
-                    padding: EdgeInsets.all(1),
+                    padding: const EdgeInsets.all(1),
                     decoration: BoxDecoration(
                       color: Colors.red,
                       borderRadius: BorderRadius.circular(6),
                     ),
-                    constraints: BoxConstraints(
+                    constraints: const BoxConstraints(
                       minWidth: 12,
                       minHeight: 12,
                     ),
                     child: Text(
                       '$eventCount',
-                      style: TextStyle(
+                      style: const TextStyle(
                         color: Colors.white,
                         fontSize: 8,
                       ),
@@ -189,7 +189,7 @@ class NavigationMenu extends StatelessWidget {
                 ),
             ],
           ),
-          SizedBox(height: 4.0), // Space between icon and label
+          const SizedBox(height: 4.0), // Space between icon and label
           Text(
             label,
             style: TextStyle(

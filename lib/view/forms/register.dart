@@ -4,7 +4,7 @@ import 'package:appdev/view/widget/text.form.global.dart';
 import 'package:appdev/view/widget/button.register.dart';
 
 class Register extends StatelessWidget {
-  Register({Key? key}) : super(key: key);
+  Register({super.key});
   final TextEditingController emailController = TextEditingController();
   final TextEditingController FirstNameController = TextEditingController();
   final TextEditingController PhoneController = TextEditingController();

@@ -28,8 +28,8 @@ class YouthInformation extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 20),
-              Divider(),
+              const SizedBox(height: 20),
+              const Divider(),
               const Padding(
                 padding: EdgeInsets.all(16.0),
                 child: Text(
@@ -47,11 +47,11 @@ class YouthInformation extends StatelessWidget {
                   textAlign: TextAlign.justify,
                 ),
               ),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
               const SizedBox(
                   width: 390, // Adjust the width as needed
                   child: ButtonMember()),
-              SizedBox(height: 20),
+              const SizedBox(height: 20),
             ],
           ),
         ),

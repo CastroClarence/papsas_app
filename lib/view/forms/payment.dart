@@ -4,7 +4,7 @@ import 'package:appdev/view/widget/text.form.global.dart';
 import 'package:appdev/view/widget/payment.button.dart';
 
 class Payment extends StatelessWidget {
-  Payment({Key? key}) : super(key: key);
+  Payment({super.key});
   final TextEditingController ReceiptController = TextEditingController();
   final TextEditingController NameController = TextEditingController();
   final TextEditingController MemIDController = TextEditingController();
