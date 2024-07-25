@@ -159,7 +159,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            YouthInformation(),
+                                            const YouthInformation(),
                                       ),
                                     );
                                   } else if (date ==
@@ -169,7 +169,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            ResearchInformation(),
+                                            const ResearchInformation(),
                                       ),
                                     );
                                   } else if (date ==
@@ -179,7 +179,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                       context,
                                       MaterialPageRoute(
                                         builder: (context) =>
-                                            LeaderInformation(),
+                                            const LeaderInformation(),
                                       ),
                                     );
                                   }
@@ -224,21 +224,21 @@ class _MyHomePageState extends State<MyHomePage> {
                       venue: "Baguio City",
                       image: "images/research.png",
                       route: MaterialPageRoute(
-                          builder: (context) => ResearchInformation())),
+                          builder: (context) => const ResearchInformation())),
                   EventCard(
                       title: "Interactive Youth Forum",
                       date: "July 24, 2024",
                       venue: "Club Yolanda, Batangas",
                       image: "images/leader_summit.jpg",
                       route: MaterialPageRoute(
-                          builder: (context) => YouthInformation())),
+                          builder: (context) => const YouthInformation())),
                   EventCard(
                       title: "Regional Leader Summit",
                       date: "July 30, 2024",
                       venue: "Manila",
                       image: "images/youth_forum.jpg",
                       route: MaterialPageRoute(
-                          builder: (context) => LeaderInformation())),
+                          builder: (context) => const LeaderInformation())),
                   // Research(),
                   // YouthForum(),
                   // LeaderSummit(),

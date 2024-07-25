@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:appdev/view/widget/button.member.dart';
 
 class LeaderInformation extends StatelessWidget {
-  LeaderInformation({super.key});
+  const LeaderInformation({super.key});
 
   @override
   Widget build(BuildContext context) {
