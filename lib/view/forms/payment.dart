@@ -5,14 +5,15 @@ import 'package:appdev/view/widget/payment.button.dart';
 
 class Payment extends StatelessWidget {
   Payment({super.key});
-  final TextEditingController ReceiptController = TextEditingController();
-  final TextEditingController NameController = TextEditingController();
-  final TextEditingController MemIDController = TextEditingController();
-  final TextEditingController AmountController = TextEditingController();
+  final TextEditingController receiptController = TextEditingController();
+  final TextEditingController nameController = TextEditingController();
+  final TextEditingController memIDController = TextEditingController();
+  final TextEditingController amountController = TextEditingController();
 
-  final TextEditingController MembershipTypeController =
+  final TextEditingController membershipTypeController =
       TextEditingController();
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -66,7 +67,7 @@ class Payment extends StatelessWidget {
                               children: [
                                 Expanded(
                                   child: TextFormGlobal(
-                                    controller: MemIDController,
+                                    controller: memIDController,
                                     text: 'Membership ID',
                                     obscure: false,
                                     textInputType: TextInputType.text,
@@ -75,7 +76,7 @@ class Payment extends StatelessWidget {
                                 const SizedBox(width: 14),
                                 Expanded(
                                   child: TextFormGlobal(
-                                    controller: NameController,
+                                    controller: nameController,
                                     text: 'Name',
                                     obscure: false,
                                     textInputType: TextInputType.text,
@@ -88,7 +89,7 @@ class Payment extends StatelessWidget {
                               children: [
                                 Expanded(
                                   child: TextFormGlobal(
-                                    controller: MembershipTypeController,
+                                    controller: membershipTypeController,
                                     text: 'Membership Type',
                                     obscure: false,
                                     textInputType: TextInputType.text,
@@ -97,7 +98,7 @@ class Payment extends StatelessWidget {
                                 const SizedBox(width: 14),
                                 Expanded(
                                   child: TextFormGlobal(
-                                    controller: AmountController,
+                                    controller: amountController,
                                     text: 'Amount',
                                     obscure: false,
                                     textInputType: TextInputType.text,
@@ -107,7 +108,7 @@ class Payment extends StatelessWidget {
                             ),
                             const SizedBox(height: 14),
                             TextFormGlobal(
-                              controller: ReceiptController,
+                              controller: receiptController,
                               text: 'Reference Receipt',
                               obscure: false,
                               textInputType: TextInputType.number,

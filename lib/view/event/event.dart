@@ -9,6 +9,8 @@ import 'package:table_calendar/table_calendar.dart';
 // import 'package:appdev/view/event/leader.dart';
 
 class MyHomePage extends StatefulWidget {
+  const MyHomePage({super.key});
+
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
@@ -256,7 +258,7 @@ class _MyHomePageState extends State<MyHomePage> {
 class Event {
   final String title;
 
-  Event({required this.title});
+  const Event({required this.title});
 
   @override
   String toString() => title;

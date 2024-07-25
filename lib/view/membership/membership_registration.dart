@@ -6,16 +6,17 @@ import 'package:appdev/view/widget/button.backhome.dart';
 class MembershipRegistration extends StatelessWidget {
   MembershipRegistration({super.key});
   final TextEditingController emailController = TextEditingController();
-  final TextEditingController FirstNameController = TextEditingController();
-  final TextEditingController PhoneController = TextEditingController();
-  final TextEditingController LastNameController = TextEditingController();
-  final TextEditingController BirthdateController = TextEditingController();
-  final TextEditingController RegionController = TextEditingController();
-  final TextEditingController OccupationController = TextEditingController();
-  final TextEditingController MembershipTypeController =
+  final TextEditingController firstNameController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController lastNameController = TextEditingController();
+  final TextEditingController birthdateController = TextEditingController();
+  final TextEditingController regionController = TextEditingController();
+  final TextEditingController occupationController = TextEditingController();
+  final TextEditingController membershipTypeController =
       TextEditingController();
-  final TextEditingController AddressTypeController = TextEditingController();
+  final TextEditingController addressTypeController = TextEditingController();
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -69,7 +70,7 @@ class MembershipRegistration extends StatelessWidget {
                               children: [
                                 Expanded(
                                   child: TextFormGlobal(
-                                    controller: FirstNameController,
+                                    controller: firstNameController,
                                     text: 'First Name',
                                     obscure: false,
                                     textInputType:
@@ -79,7 +80,7 @@ class MembershipRegistration extends StatelessWidget {
                                 const SizedBox(width: 14),
                                 Expanded(
                                   child: TextFormGlobal(
-                                    controller: LastNameController,
+                                    controller: lastNameController,
                                     text: 'Last Name',
                                     obscure: false,
                                     textInputType: TextInputType.text,
@@ -92,7 +93,7 @@ class MembershipRegistration extends StatelessWidget {
                               children: [
                                 Expanded(
                                   child: TextFormGlobal(
-                                    controller: PhoneController,
+                                    controller: phoneController,
                                     text: 'Phone Number',
                                     obscure: false,
                                     textInputType: TextInputType.number,
@@ -101,7 +102,7 @@ class MembershipRegistration extends StatelessWidget {
                                 const SizedBox(width: 14),
                                 Expanded(
                                   child: TextFormGlobal(
-                                    controller: BirthdateController,
+                                    controller: birthdateController,
                                     text: 'Birthdate',
                                     obscure: false,
                                     textInputType: TextInputType.text,
@@ -114,7 +115,7 @@ class MembershipRegistration extends StatelessWidget {
                               children: [
                                 Expanded(
                                   child: TextFormGlobal(
-                                    controller: RegionController,
+                                    controller: regionController,
                                     text: 'Region',
                                     obscure: false,
                                     textInputType: TextInputType.text,
@@ -123,7 +124,7 @@ class MembershipRegistration extends StatelessWidget {
                                 const SizedBox(width: 14),
                                 Expanded(
                                   child: TextFormGlobal(
-                                    controller: AddressTypeController,
+                                    controller: addressTypeController,
                                     text: 'Address',
                                     obscure: false,
                                     textInputType: TextInputType.text,
@@ -140,14 +141,14 @@ class MembershipRegistration extends StatelessWidget {
                             ),
                             const SizedBox(height: 14),
                             TextFormGlobal(
-                              controller: OccupationController,
+                              controller: occupationController,
                               text: 'Occupation',
                               obscure: false,
                               textInputType: TextInputType.text,
                             ),
                             const SizedBox(height: 14),
                             TextFormGlobal(
-                              controller: MembershipTypeController,
+                              controller: membershipTypeController,
                               text: 'Membership Type',
                               obscure: false,
                               textInputType: TextInputType.text,

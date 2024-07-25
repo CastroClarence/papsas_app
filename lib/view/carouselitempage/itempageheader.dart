@@ -20,6 +20,7 @@ class SingleItemHeaderDelegate extends SliverPersistentHeaderDelegate {
     required this.minExtent,
   });
 
+  @override
   Widget build(
       BuildContext context, double shrinkOffset, bool overlapsContent) {
     return Stack(
@@ -31,6 +32,7 @@ class SingleItemHeaderDelegate extends SliverPersistentHeaderDelegate {
   @override
   bool shouldRebuild(covariant SliverPersistentHeaderDelegate oldDelegate) =>
       true;
+  @override
   OverScrollHeaderStretchConfiguration get stretchConfiguration =>
       OverScrollHeaderStretchConfiguration();
 }

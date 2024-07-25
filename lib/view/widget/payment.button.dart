@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class ButtonPayment extends StatelessWidget {
   const ButtonPayment({super.key});
 
+  @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {

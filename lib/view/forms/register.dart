@@ -6,11 +6,12 @@ import 'package:appdev/view/widget/button.register.dart';
 class Register extends StatelessWidget {
   Register({super.key});
   final TextEditingController emailController = TextEditingController();
-  final TextEditingController FirstNameController = TextEditingController();
-  final TextEditingController PhoneController = TextEditingController();
-  final TextEditingController LastNameController = TextEditingController();
+  final TextEditingController firstNameController = TextEditingController();
+  final TextEditingController phoneController = TextEditingController();
+  final TextEditingController lastNameController = TextEditingController();
   final TextEditingController passwordController = TextEditingController();
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
@@ -64,7 +65,7 @@ class Register extends StatelessWidget {
                               children: [
                                 Expanded(
                                   child: TextFormGlobal(
-                                    controller: FirstNameController,
+                                    controller: firstNameController,
                                     text: 'First Name',
                                     obscure: false,
                                     textInputType:
@@ -74,7 +75,7 @@ class Register extends StatelessWidget {
                                 const SizedBox(width: 14),
                                 Expanded(
                                   child: TextFormGlobal(
-                                    controller: LastNameController,
+                                    controller: lastNameController,
                                     text: 'Last Name',
                                     obscure: false,
                                     textInputType: TextInputType.text,
@@ -91,7 +92,7 @@ class Register extends StatelessWidget {
                             ),
                             const SizedBox(height: 14),
                             TextFormGlobal(
-                              controller: PhoneController,
+                              controller: phoneController,
                               text: 'Phone Number',
                               obscure: false,
                               textInputType: TextInputType.number,

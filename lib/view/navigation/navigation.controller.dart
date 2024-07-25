@@ -9,7 +9,7 @@ class NavigationController extends GetxController {
 
   final screen = [
     const HomePage(),
-    MyHomePage(),
+    const MyHomePage(),
     const NotificationPage(),
     const ProfilePage(),
   ];

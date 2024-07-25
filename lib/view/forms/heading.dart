@@ -1,10 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class HomeHeading extends StatelessWidget {
   final String title;
   final Widget? trailing;
-  HomeHeading({super.key, required this.title, this.trailing});
+  const HomeHeading({super.key, required this.title, this.trailing});
 
   @override
   Widget build(BuildContext context) {

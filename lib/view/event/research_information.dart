@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:appdev/view/widget/button.member.dart';
 
 class ResearchInformation extends StatelessWidget {
-  ResearchInformation({Key? key}) : super(key: key);
+  ResearchInformation({super.key});
 
   @override
   Widget build(BuildContext context) {

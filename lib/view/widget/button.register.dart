@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 class ButtonRegister extends StatelessWidget {
   const ButtonRegister({super.key});
 
+  @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
