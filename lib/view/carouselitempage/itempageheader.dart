@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-class SingleNewsItemHeaderDelegate extends SliverPersistentHeaderDelegate {
+class SingleItemHeaderDelegate extends SliverPersistentHeaderDelegate {
   final String imageAssetPath;
   final String category;
   final String title;
@@ -11,7 +11,7 @@ class SingleNewsItemHeaderDelegate extends SliverPersistentHeaderDelegate {
   @override
   final double minExtent;
 
-  const SingleNewsItemHeaderDelegate({
+  const SingleItemHeaderDelegate({
     required this.imageAssetPath,
     required this.description,
     required this.category,

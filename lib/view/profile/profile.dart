@@ -1,3 +1,4 @@
+import 'package:appdev/view/forms/login.view.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -71,7 +72,6 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 30),
           Expanded(
             child: ListView(
               children: [
@@ -95,7 +95,10 @@ class ProfilePage extends StatelessWidget {
                 ProfileTile(
                   icon: Icons.logout_outlined,
                   title: "Logout",
-                  ontap: () {},
+                  ontap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => LoginView()));
+                  },
                 ),
               ],
             ),

@@ -1,14 +1,14 @@
-import 'package:appdev/view/home/home.dart';
+import 'package:appdev/view/navigation/navigation_menu.dart';
 import 'package:flutter/material.dart';
 
-class ButtonRegister extends StatelessWidget {
-  const ButtonRegister({super.key});
+class ButtonPayment extends StatelessWidget {
+  const ButtonPayment({super.key});
 
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => const HomePage()));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const NavigationMenu()));
       },
       child: Container(
         alignment: Alignment.center,

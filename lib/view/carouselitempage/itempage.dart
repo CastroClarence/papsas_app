@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:appdev/view/carouselitempage/itempageheader.dart';
 import 'package:appdev/view/widget/button.member.dart';
 
-class SingleNewsItemPage extends StatelessWidget {
+class SingleItemPage extends StatelessWidget {
   final String imageAssetPath;
   final String category;
   final String title;
   final String description;
 
-  const SingleNewsItemPage({
+  const SingleItemPage({
     super.key,
     required this.imageAssetPath,
     required this.category,
@@ -28,7 +28,7 @@ class SingleNewsItemPage extends StatelessWidget {
         body: CustomScrollView(
           slivers: [
             SliverPersistentHeader(
-                delegate: SingleNewsItemHeaderDelegate(
+                delegate: SingleItemHeaderDelegate(
                     title: title,
                     category: category,
                     imageAssetPath: imageAssetPath,
@@ -64,7 +64,7 @@ class SingleNewsItemPage extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                      const ButtonRegister(),
+                      const ButtonMember(),
                     ],
                   )),
             )

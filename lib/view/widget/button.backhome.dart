@@ -1,8 +1,8 @@
 import 'package:appdev/view/forms/payment.dart';
 import 'package:flutter/material.dart';
 
-class ButtonRegister extends StatelessWidget {
-  const ButtonRegister({super.key});
+class ButtonBackHome extends StatelessWidget {
+  const ButtonBackHome({super.key});
 
   Widget build(BuildContext context) {
     return InkWell(

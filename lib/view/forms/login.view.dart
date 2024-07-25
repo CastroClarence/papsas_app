@@ -70,7 +70,7 @@ class LoginView extends StatelessWidget {
                           child: Column(
                             children: <Widget>[
                               Container(
-                                height: 70,
+                                height: 60,
                                 padding: const EdgeInsets.only(
                                     top: 5, left: 10, bottom: 5),
                                 decoration: BoxDecoration(
@@ -86,7 +86,7 @@ class LoginView extends StatelessWidget {
                                   child: TextFormField(
                                     controller: emailController,
                                     decoration: const InputDecoration(
-                                      labelText: 'Email',
+                                      hintText: 'Email',
                                       border: InputBorder.none,
                                       icon: Icon(Icons.account_circle_rounded),
                                     ),
@@ -97,7 +97,7 @@ class LoginView extends StatelessWidget {
                               ),
                               const SizedBox(height: 20),
                               Container(
-                                height: 70,
+                                height: 60,
                                 padding:
                                     const EdgeInsets.only(top: 5, left: 10),
                                 decoration: BoxDecoration(
@@ -114,10 +114,11 @@ class LoginView extends StatelessWidget {
                                     controller: passwordController,
                                     decoration: const InputDecoration(
                                       border: InputBorder.none,
-                                      labelText: 'Password',
+                                      hintText: 'Password',
                                       icon: Icon(Icons.lock),
                                     ),
                                     keyboardType: TextInputType.text,
+                                    obscureText: true,
                                     validator: passwordValidator,
                                   ),
                                 ),

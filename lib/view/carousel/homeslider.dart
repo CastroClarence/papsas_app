@@ -24,7 +24,7 @@ class HomeSliderItem extends StatelessWidget {
           Navigator.push(
               context,
               MaterialPageRoute(
-                  builder: (context) => SingleNewsItemPage(
+                  builder: (context) => SingleItemPage(
                         imageAssetPath: imageAssetPath,
                         description: description,
                         title: title,

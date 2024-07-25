@@ -116,7 +116,7 @@ class Payment extends StatelessWidget {
                           ],
                         )),
                         const SizedBox(height: 15),
-                        const ButtonRegister(),
+                        const ButtonPayment(),
                       ],
                     ),
                   ],

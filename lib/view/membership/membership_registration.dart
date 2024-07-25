@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:appdev/view/widget/text.form.global.dart';
 import 'package:appdev/view/widget/button.backhome.dart';
 
-class Register extends StatelessWidget {
-  Register({Key? key}) : super(key: key);
+class MembershipRegistration extends StatelessWidget {
+  MembershipRegistration({Key? key}) : super(key: key);
   final TextEditingController emailController = TextEditingController();
   final TextEditingController FirstNameController = TextEditingController();
   final TextEditingController PhoneController = TextEditingController();
@@ -155,7 +155,7 @@ class Register extends StatelessWidget {
                           ],
                         )),
                         const SizedBox(height: 15),
-                        const ButtonRegister(),
+                        const ButtonBackHome(),
                       ],
                     ),
                   ],

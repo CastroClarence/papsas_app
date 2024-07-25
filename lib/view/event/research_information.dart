@@ -51,7 +51,7 @@ class ResearchInformation extends StatelessWidget {
               SizedBox(height: 20),
               const SizedBox(
                   width: 390, // Adjust the width as needed
-                  child: ButtonRegister()),
+                  child: ButtonMember()),
               SizedBox(height: 20),
             ],
           ),

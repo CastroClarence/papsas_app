@@ -1,14 +1,14 @@
 import 'package:appdev/view/membership/membership_registration.dart';
 import 'package:flutter/material.dart';
 
-class ButtonRegister extends StatelessWidget {
-  const ButtonRegister({super.key});
+class ButtonMember extends StatelessWidget {
+  const ButtonMember({super.key});
 
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        Navigator.push(
-            context, MaterialPageRoute(builder: (context) => Register()));
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => MembershipRegistration()));
       },
       child: Container(
         alignment: Alignment.center,
