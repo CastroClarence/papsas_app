@@ -10,11 +10,11 @@ The Philippine Association of Practitioners of Student Affairs and Services (PAP
 The main objective of this study is to provide up-to-date information to PAPSAS, Inc.'s members through the mobile application.
 
   1.	To develop and implement a mobile application for PAPSAS, Inc. that provides latest information such as:
-    1.1.	Latest and upcoming events such as national conventions, research conferences, and webinars.
-    1.2.	Achievements, and announcements such as new elected officers, and deadline of registration.
+  1.1.	Latest and upcoming events such as national conventions, research conferences, and webinars.
+  1.2.	Achievements, and announcements such as new elected officers, and deadline of registration.
   2.	To streamline organizational processes through the following functionalities:
-    2.1.	Notify the members about the payment dues, and registrations.
-    2.2.	Communicate with members that can only use mobile devices.
+  2.1.	Notify the members about the payment dues, and registrations.
+  2.2.	Communicate with members that can only use mobile devices.
 
 # Project Description
 
